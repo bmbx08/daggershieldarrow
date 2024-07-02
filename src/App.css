@@ -1,0 +1,39 @@
+
+.box{
+  border:3px solid black;
+  width:48%;
+  text-align: center;
+}
+
+.item-img{
+  width: 400px;
+}
+
+.main{
+  display:flex;
+}
+
+.main-section{
+  justify-content: space-evenly;
+  padding: 15px 0;
+}
+
+.button-section{
+  justify-content: center;
+}
+
+.button-section>button{
+  margin: 0 10px;
+}
+
+.Win {
+  color:rgb(16, 161, 16);
+}
+
+.Lose {
+  color: red;
+}
+
+.Tie{
+  color: black;
+}
