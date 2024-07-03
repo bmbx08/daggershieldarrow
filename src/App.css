@@ -92,6 +92,10 @@ h3{
   margin: 0;
 }
 
+.result:after{
+  content:"!!"
+}
+
 .versus-section{
   width:10%;
 }
@@ -125,6 +129,7 @@ h3{
   box-shadow: 0 0 5px 5px rgb(255, 111, 0);
   background-color: #f35900;
   color:white;
+  cursor: pointer;
 }
 
 .button-section>button:active{
