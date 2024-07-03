@@ -1,29 +1,143 @@
-
-.box{
-  border:3px solid black;
-  width:48%;
-  text-align: center;
+@font-face{
+  font-family: '둥글';
+  font-style: 'normal';
+  font-weight: 400;
+  src: url('./font/KCC-Ganpan.woff');
 }
 
-.item-img{
-  width: 400px;
+.top-section{
+  display: flex;
+  justify-content: space-between;
 }
 
-.main{
-  display:flex;
-}
-
-.main-section{
-  justify-content: space-evenly;
-  padding: 15px 0;
-}
-
-.button-section{
+.top-section>div{
+  width:33%;
+  display: flex;
   justify-content: center;
 }
 
+.title-box{
+  display: flex;
+  align-items: center;
+}
+
+.title{
+  text-align: center;
+  align-self: center;
+  font-size: 2.5em;
+}
+
+.score-box{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.score-section{
+  display: flex;
+  padding: 10px;
+  background-color: white;
+  border-radius: 25px;
+  padding: 15px 25px;
+  border: 1px solid black;
+  margin-right:15px;
+}
+
+.score-section>h3:first-child{
+  padding-right: 10px;
+}
+
+h3{
+  margin:0;
+}
+
+.middle-section{
+  display:flex;
+  justify-content: center;
+  padding-top:5px;
+  padding-bottom: 15px;
+}
+
+.main-section{
+  width: 1170px;
+  height:450px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.box{
+  border:3px solid black;
+  border-radius: 25px;
+  width:40%;
+  height: 100%;
+  text-align: center;
+  background-color: white;
+}
+
+.box-title{
+  height:15%;
+  margin: 0;
+}
+
+.item-img{
+  width: 75%;
+  height:75%;
+  border-radius: 25px;
+}
+
+.result{
+  height: 10%;
+  margin: 0;
+}
+
+.versus-section{
+  width:10%;
+}
+
+.versus-img{
+  width: 100%;
+}
+
+.button-section{
+  display:flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .button-section>button{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 100px;
+  padding: 10px;
   margin: 0 10px;
+  background-color: white;
+  transform: scale(1.5);
+  margin: 0 20px;
+}
+
+.button-section>button:hover{
+  transform: scale(1.65);
+  transition: 0.1s ease-in-out;
+  box-shadow: 0 0 5px 5px rgb(255, 111, 0);
+  background-color: #f35900;
+  color:white;
+}
+
+.button-section>button:active{
+  transform: scale(1.35);
+  transition: 0.1s ease-in-out;
+  box-shadow: 0 0 5px 5px rgb(255, 111, 0);
+  background-color: #f35900;
+  color:white;
+}
+
+.icon::before{
+  width:100%;
+  height: 100%;
 }
 
 .Win {

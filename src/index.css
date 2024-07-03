@@ -1,3 +1,10 @@
+@font-face{
+  font-family: '둥글';
+  font-style: 'normal';
+  font-weight: 400;
+  src: url('./font/KCC-Ganpan.woff');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +12,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: orange;
+  font-family: '둥글';
 }
 
 code {
