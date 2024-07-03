@@ -11,6 +11,13 @@
 # production
 /build
 
+# unused images
+src/images/bow1.png
+src/images/bow2.png
+src/images/dagger1.png
+src/images/staff1.png
+src/images/staff2.png
+
 # misc
 .DS_Store
 .env.local
