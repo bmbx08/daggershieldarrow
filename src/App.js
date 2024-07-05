@@ -2,6 +2,8 @@ import {useState} from "react";
 import "./App.css";
 import Box from "./component/Box";
 import versus from "./images/vs.png";
+import happy from "./images/happy.gif"
+import sad from "./images/sad.gif"
 
 // import dagger from './images/dagger1.png'
 // import bow from './images/bow1.png'
@@ -45,6 +47,7 @@ function App() {
   const [userResult, setUserResult] = useState("");
   const [compResult, setCompResult] = useState("");
   const [userScore, setScore] = useState(0);
+  const [resultGIF, setresultGIF]=useState("");
 
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]);
@@ -54,6 +57,7 @@ function App() {
     setUserResult(userResult);
     setCompResult(compJudgement(userResult));
     calcScore(userResult);
+    setresultGIF(GIFJudgement(userResult));
   };
 
   const calcScore = (result) => {
@@ -90,6 +94,11 @@ function App() {
     }
   };
 
+  const GIFJudgement = (user) => {
+    if (user==="Tie") return "no-face" 
+      else if (user!=="Tie") return (user==="Win"?"happy-face":"sad-face");
+  }
+
   const compJudgement = (user) => {
     if (user === "Tie") {
       return "Tie";
@@ -116,11 +125,13 @@ function App() {
 
       <div className="middle-section">
         <div className="main-section">
-          <Box title="You" item={userSelect} result={userResult} />
+          <Box title="You" item={userSelect} result={userResult}/>
           <div className="versus-section">
+            <img src={happy} className={`result-img happy ${resultGIF}`}/>
             <img src={versus} className="versus-img" />
+            <img src={sad} className={`result-img sad ${resultGIF}`}/>
           </div>
-          <Box title="Computer" item={computerSelect} result={compResult} />
+          <Box title="Computer" item={computerSelect} result={compResult}/>
           {/* <img src={dagger}/> */}
         </div>
       </div>
